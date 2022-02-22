@@ -1,0 +1,29 @@
+const food = [
+{
+firstName: "Burger",
+lastName: "King",
+favFood: "burger",
+},
+{
+firstName: "Chinese",
+lastName: "Wok",
+favFood: "chinese",
+},
+{
+firstName: "Sushi",
+lastName: "Gen",
+favFood: "sushi",
+},
+];
+
+function lookUpFood(name, prop) {
+for (var i = 0; i < food.length; i++) {
+if (food[i].firstName === name) {
+return food[i][prop] || "Chose different option"
+}
+}
+return "Cook at home"
+}
+
+lookUpFood("Burger","favFood");
+console.log(lookUpFood("Burger","favFood"));
